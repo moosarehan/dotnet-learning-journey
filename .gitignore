@@ -1,0 +1,32 @@
+## Ignore Visual Studio temporary files, build results, and user files
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+publish/
+
+# Visual Studio / IDE directories
+.vs/
+.vscode/
+.idea/
+*.sln.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Package & temporary files
+*.nupkg
+packages/
+*~
+*.tmp
+*.temp
