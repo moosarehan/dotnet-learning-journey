@@ -6,7 +6,7 @@ namespace myfirstrestapi.IServices
 {
     public interface IAuthService
     {
-        Task<Tuple<int, string>> LoginUser(UserDto user);
+        Task<Tuple<int, TokenDto>> LoginUser(UserDto user);
         Task<Tuple<int, string>> register(UserDto user);
     }
 }
