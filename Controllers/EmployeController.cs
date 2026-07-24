@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using myfirstrestapi.Dto;
 using myfirstrestapi.Entities;
@@ -8,6 +9,7 @@ using myfirstrestapi.Services;
 
 namespace myfirstrestapi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class EmployeController(IEmployeService employeService) : ControllerBase

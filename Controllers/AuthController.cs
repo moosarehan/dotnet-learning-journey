@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using myfirstrestapi.Dto;
 using myfirstrestapi.GenericResponse;
@@ -23,10 +23,10 @@ namespace myfirstrestapi.Controllers
                 var result = await authService.LoginUser(user);
                 if (result.Item1 == 0)
                 {
-                    return NotFound(Response<UserDto>.failure(null, result.Item2));
+                    return NotFound(Response<TokenDto>.failure(null, result.Item2.Message));
                 }
-              
-                return Ok(Response<UserDto>.success(user, "Login successful"));
+
+                return Ok(Response<TokenDto>.success(result.Item2, result.Item2.Message));
             }
             catch (Exception)
             {
